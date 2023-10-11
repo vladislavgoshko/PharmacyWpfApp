@@ -1,0 +1,168 @@
+﻿<Window x:Class="WpfAppPharmacy.AddDrugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPharmacy"
+        mc:Ignorable="d"
+        Title="Добавление или изменение лекарства" 
+        Height="666" MinHeight="515"
+        Width="681" MinWidth="681" MaxWidth="681"
+        FontSize="15">
+    <Grid>
+        <Grid Margin="10,10,0,0" HorizontalAlignment="Left" Width="644" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Название" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="drugName_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="10,45,0,0" HorizontalAlignment="Left" Width="644" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Форма" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="mainForm_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="10,80,0,0" HorizontalAlignment="Left" Width="317" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Дозировка" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="dosage_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="337,80,0,0" HorizontalAlignment="Left" Width="317" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Количество в упаковке" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="packing_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"
+                PreviewTextInput="packing_TextBox_PreviewTextInput"/>
+        </Grid>
+        <Grid Margin="10,115,0,0" HorizontalAlignment="Left" Width="644" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Фарм-форма" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="pharmaForm_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="10,150,0,0" HorizontalAlignment="Left" Width="644" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Краткая форма" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="curtForm_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="10,185,0,0" HorizontalAlignment="Left" Width="317" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Изготовитель" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="manufacturer_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="337,185,0,0" HorizontalAlignment="Left" Width="317" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Компания" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="producer_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="10,220,0,0" HorizontalAlignment="Left" Width="644" Height="30" VerticalAlignment="Top">
+            <TextBox Text="МНН" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="mnn_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <Grid Margin="10,255,0,0" HorizontalAlignment="Left" Width="644" Height="30" VerticalAlignment="Top">
+            <TextBox Text="Фармокологическая группа" Foreground="Red"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"/>
+            <TextBox x:Name="ftg_TextBox" Opacity="0"
+                TextWrapping="Wrap" Background="White" 
+                BorderBrush="Black" FontSize="16" 
+                VerticalContentAlignment="Center" 
+                Padding="6,0,0,0"
+                GotKeyboardFocus="textBox_GotKeyboardFocus"
+                LostKeyboardFocus="textBox_LostKeyboardFocus"/>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="10,290,0,0"
+                   Padding="9,10,0,0"
+                   TextWrapping="Wrap" Text="Параграфы инструкций" VerticalAlignment="Top" 
+                   Height="35" Width="644"/>
+        <ScrollViewer Margin="10,330,10,52">
+            <StackPanel x:Name="instructions_StackPanel"
+                        Margin="0,0,0,0" Orientation="Vertical"/>
+        </ScrollViewer>
+        <Button x:Name="saveDrug_Button" Content="Сохранить лекарство" 
+                Margin="232,0,249,10" Background="White" 
+                FontWeight="Bold" Height="37" 
+                VerticalAlignment="Bottom" 
+                BorderBrush="Black" Click="saveDrug_Button_ClickAsync" />
+    </Grid>
+</Window>
